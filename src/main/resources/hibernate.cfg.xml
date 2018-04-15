@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://sql10.freemysqlhosting.net:3306/sql10232156?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">sql10232156</property>
+    <property name="hibernate.connection.password">pCHUNaYYb1</property>
+
+    <mapping class="com.hn.hurrynow.model.BranchOffice"/>
+    <mapping class="com.hn.hurrynow.model.BranchOfficeId"/>
+    <mapping class="com.hn.hurrynow.model.Client"/>
+    <mapping class="com.hn.hurrynow.model.Discount"/>
+    <mapping class="com.hn.hurrynow.model.DiscountRecord"/>
+    <mapping class="com.hn.hurrynow.model.DiscountRecordId"/>
+    <mapping class="com.hn.hurrynow.model.Product"/>
+    <mapping class="com.hn.hurrynow.model.ProductId"/>
+    <mapping class="com.hn.hurrynow.model.ProductCategory"/>
+    <mapping class="com.hn.hurrynow.model.Store"/>
+    <mapping class="com.hn.hurrynow.model.StoreCategory"/>
+    
+    <mapping class="com.hn.hurrynow.controller.BranchOfficeController"/>
+    <mapping class="com.hn.hurrynow.controller.ClientController"/>
+    <mapping class="com.hn.hurrynow.controller.DiscountRecordController"/>
+    <mapping class="com.hn.hurrynow.controller.DiscountController"/>
+    <mapping class="com.hn.hurrynow.controller.ProductController"/>
+    <mapping class="com.hn.hurrynow.controller.StoreController"/>
+    <mapping class="com.hn.hurrynow.controller.StoreCategoryController"/>
+    
+    <mapping class="com.hn.hurrynow.persistence.BranchOfficeRepository"/>
+    <mapping class="com.hn.hurrynow.persistence.ClientRepository"/>
+    <mapping class="com.hn.hurrynow.persistence.DiscountRecordRepository"/>
+    <mapping class="com.hn.hurrynow.persistence.DiscountRepository"/>
+    <mapping class="com.hn.hurrynow.persistence.ProductCategoryRepository"/>
+    <mapping class="com.hn.hurrynow.persistence.ProductRepository"/>
+    <mapping class="com.hn.hurrynow.persistence.ServicesHurryNowException"/>
+    <mapping class="com.hn.hurrynow.persistence.StoreCategoryRepository"/>
+    <mapping class="com.hn.hurrynow.persistence.StoreRepository"/>
+    
+    <mapping class="com.hn.hurrynow.stub.IStub"/>
+    <mapping class="com.hn.hurrynow.stub.Stub"/>
+    <mapping class="com.hn.hurrynow.stub.Impl"/>
+  </session-factory>
+</hibernate-configuration>
