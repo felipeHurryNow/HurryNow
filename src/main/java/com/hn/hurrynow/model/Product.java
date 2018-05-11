@@ -35,15 +35,17 @@ public class Product implements Serializable {
     private String          description; 
     private double          price; 
     private char            enableDiscount; 
+    private String          imageProduct; 
 
     public Product() {
     }
 
-    public Product(ProductId idProduct, String description, double price, char enableDiscount) {
+    public Product(ProductId idProduct, String description, double price, char enableDiscount, String imageProduct) {
         this.idProduct = idProduct;
         this.description = description;
         this.price = price;
         this.enableDiscount = enableDiscount;
+        this.imageProduct = imageProduct; 
     }
     
     @EmbeddedId
@@ -106,5 +108,16 @@ public class Product implements Serializable {
     public void setEnableDiscount(char enableDiscount) {
         this.enableDiscount = enableDiscount;
     }
+
+    @Column(name = "image_product", nullable = false, length = 1000000)
+    public String getImageProduct() {
+        return imageProduct;
+    }
+
+    public void setImageProduct(String imageProduct) {
+        this.imageProduct = imageProduct;
+    }
+    
+    
     
 }

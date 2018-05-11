@@ -68,8 +68,8 @@ public class DemoApplication {
         public static void main(String[] args) throws IOException, DocumentException {
             SpringApplication.run(DemoApplication.class, args);
             
-            String DEST = "C:/Users/juang/Desktop/HurryNow/src/main/java/com/hn/hurrynow/example.pdf";
-            String HTML = "C:/Users/juang/Desktop/HurryNow/src/main/java/com/hn/hurrynow/example.html";
+            String DEST = "C:\\Users\\felip\\Documents\\Hurry Now\\HurryNowWebServices\\HurryNow\\src\\main\\java\\com\\hn\\hurrynow\\example.pdf";
+            String HTML = "C:\\Users\\felip\\Documents\\Hurry Now\\HurryNowWebServices\\HurryNow\\src\\main\\java\\com\\hn\\hurrynow\\example.html";
             File file = new File(DEST);
             file.getParentFile().mkdirs();
             ConverterToPDF convert = new ConverterToPDF();

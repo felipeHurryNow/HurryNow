@@ -22,8 +22,8 @@ import java.nio.charset.Charset;
  */
 public class ConverterToPDF {
 
-    public static final String DEST = "C:/Users/juang/Desktop/HurryNow/src/main/java/com/hn/hurrynow/example.pdf";
-    public static final String HTML = "C:/Users/juang/Desktop/HurryNow/src/main/java/com/hn/hurrynow/example.html";
+    public static final String DEST = "C:\\Users\\felip\\Documents\\Hurry Now\\HurryNowWebServices\\HurryNow\\src\\main\\java\\com\\hn\\hurrynow\\example.pdf";
+    public static final String HTML = "C:\\Users\\felip\\Documents\\Hurry Now\\HurryNowWebServices\\HurryNow\\src\\main\\java\\com\\hn\\hurrynow\\example.html";
  
     /*public static void main(String[] args) throws IOException, DocumentException {
         File file = new File(DEST);
