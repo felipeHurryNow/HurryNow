@@ -30,6 +30,7 @@ import org.hibernate.annotations.FetchMode;
 public class Product implements Serializable {
     
     private ProductId       idProduct; 
+    private Store           store; 
     private BranchOffice    branchOffice; 
     private ProductCategory productCategory; 
     private String          description; 
@@ -40,8 +41,9 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    public Product(ProductId idProduct, String description, double price, char enableDiscount, String imageProduct) {
+    public Product(ProductId idProduct, Store store, String description, double price, char enableDiscount, String imageProduct) {
         this.idProduct = idProduct;
+        this.store = store; 
         this.description = description;
         this.price = price;
         this.enableDiscount = enableDiscount;
@@ -56,6 +58,23 @@ public class Product implements Serializable {
     public void setIdProduct(ProductId idProduct) {
         this.idProduct = idProduct;
     }
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
+    @Fetch(FetchMode.JOIN)
+    @JoinColumns({
+        @JoinColumn(name="id_store", insertable = false, updatable = false)
+    })
+        //@JoinColumn(name="id_store", insertable = false, updatable = false)
+    public Store getStore() {
+        return store;
+    }
+
+    
+    public void setStore(Store store) {
+        this.store = store;
+    }
+    
+    
 
     @ManyToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
     @Fetch(FetchMode.JOIN)
