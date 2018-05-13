@@ -22,7 +22,8 @@ public class BranchOffice implements Serializable {
     
     private BranchOfficeId  idBranchOffice; 
     private String          address; 
-    private String          local; 
+    public  String          name; 
+    private String          local;
     private int             phone; 
     private double          latitude; 
     private double          longitude; 
@@ -57,6 +58,17 @@ public class BranchOffice implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Column(name = "name", nullable = false)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    
 
     @Column(name = "local", nullable = false, length = 6)
     public String getLocal() {
