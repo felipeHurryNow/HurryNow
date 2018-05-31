@@ -30,13 +30,15 @@ public class Store implements Serializable {
     private Long idStore;
     private StoreCategory storeCategory;
     private String  name;
+    private String          imageStore; 
 
     public Store() {
     }
 
-    public Store(Long idStore, String name) {
+    public Store(Long idStore, String name, String imageStore) {
         this.idStore = idStore;
         this.name = name;
+        this.imageStore = imageStore; 
     }
     
     @Id
@@ -68,6 +70,17 @@ public class Store implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+    
+    @Column(name = "image_store", nullable = false, length = 1000000)
+    public String getImageStore() {
+        return imageStore;
+    }
+
+    public void setImageStore(String imageStore) {
+        this.imageStore = imageStore;
+    }
+    
+    
 
     
 }
